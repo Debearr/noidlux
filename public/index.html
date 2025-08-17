@@ -4,9 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noidlux</title>
+  <style>
+    :root { --brand:#4cafef; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100svh; display:flex; align-items:center; justify-content:center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:#fff; background:#0f1115 linear-gradient(180deg,#0f1115 0%, #0b1220 100%);
+      padding:32px;
+    }
+    .card{
+      width:100%; max-width:720px; background:#121621; border:1px solid #1f2636;
+      border-radius:18px; padding:32px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    h1{ margin:0 0 12px; font-size:clamp(28px,4vw,40px); line-height:1.1;}
+    p{ margin:0 0 20px; font-size:clamp(16px,2.5vw,18px); color:#cbd5e1;}
+    .arrow{ font-size:28px; margin:6px 0 18px; opacity:.9;}
+    .row{ display:flex; gap:12px; flex-wrap:wrap;}
+    button, a.btn{
+      appearance:none; border:none; cursor:pointer; text-decoration:none;
+      background:var(--brand); color:#001018; padding:12px 18px; border-radius:10px;
+      font-weight:700; transition:transform .08s ease, opacity .2s ease;
+    }
+    button:active, a.btn:active{ transform:translateY(1px); }
+    a.btn.secondary{
+      background:#0b1220; color:#bcd7ff; border:1px solid #1f2636;
+    }
+    .footer{ margin-top:22px; font-size:13px; color:#a3b2c7; opacity:.8;}
+  </style>
 </head>
 <body>
-  <h1>Hello from Noidlux 🎉</h1>
-  <p>Your site is live on Vercel!</p>
+  <main class="card">
+    <h1>🚀 Welcome to Noidlux</h1>
+    <p>Your site is live — customize it now!</p>
+    <div class="arrow">⬇️</div>
+    <div class="row">
+      <button onclick="alert('Hello from Noidlux!')">Click Me</button>
+      <a class="btn secondary" href="https://noidlux.com" target="_self">Visit Home</a>
+    </div>
+    <div class="footer">Deployed on Vercel • public/index.html</div>
+  </main>
 </body>
 </html>
